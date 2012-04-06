@@ -3,14 +3,17 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.xml
-  def index
-    @posts = Post.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @posts }
-    end
+  def_continued :index
+    render :partial => 'form_part_1'
+    continue
+
+    render :partial => 'form_part_2'
+    continue
+
+    render :partial => 'form_part_3'
   end
+
 
   # GET /posts/1
   # GET /posts/1.xml
@@ -85,15 +88,5 @@ class PostsController < ApplicationController
     end
   end
 
-  def checking
-    # undefined method contine :>
-    render :partial => 'form_part_1'
-    continue
-
-    render :partial => 'form_part_2'
-    continue
-
-    render :partial => 'form_part_3'
-  end
 end
 
