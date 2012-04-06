@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
 
-  def_continued :index
+  def_continued :index do
     render :partial => 'form_part_1'
     continue
 
