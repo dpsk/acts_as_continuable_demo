@@ -86,7 +86,7 @@ class PostsController < ApplicationController
   end
 
   def checking
-    # not even fired yet, problem with session!
+    # undefined method contine :>
     render :partial => 'form_part_1'
     continue
 
