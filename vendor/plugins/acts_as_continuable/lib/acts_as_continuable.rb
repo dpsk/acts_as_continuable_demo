@@ -6,7 +6,6 @@ require 'acts_as_continuable/action'
 
 module ActsAsContinuable
   def self.included(c) #:nodoc:
-    raise "Session store must be in memory for ActsAsContinuable" unless ActionController::Base.session_store == CGI::Session::MemoryStore
     class << c
       include ClassMacros
     end
